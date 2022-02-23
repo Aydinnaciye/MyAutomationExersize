@@ -1,5 +1,6 @@
 package stepdefinitions;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
@@ -31,7 +32,7 @@ public class RegisterUserStepDefs {
 
     }
 
-    @Then("user clicks on signup button")
+    @Then("user clicks on signup_button")
     public void user_clicks_on_signup_button() {
 
         mainPageFunctionalities.signupButton.click();
@@ -47,61 +48,27 @@ public class RegisterUserStepDefs {
     @When("user enters name and email")
     public void user_enters_name_and_email() {
 
+        mainPageFunctionalities.nameBox.sendKeys("Nancy");
+        mainPageFunctionalities.emailBox.sendKeys("Nancy@gmail.com");
+    //   mainPageFunctionalities.nameBox.sendKeys("Naci");
+    //    mainPageFunctionalities.emailBox.sendKeys("Ay@gmail.com");
     }
 
-    @When("user clicks signup button")
+    @When("user clicks signup_button")
     public void user_clicks_signup_button() {
 
+        mainPageFunctionalities.accountCreateSignupButton.click();
     }
 
     @When("user verifies that enter account information is visible")
     public void user_verifies_that_enter_account_information_is_visible() {
+        Assert.assertTrue(mainPageFunctionalities.createAccountPageVerification.isDisplayed());
 
     }
+    @And("user verifies email address is visible is displayed")
+    public void userVerifiesEmailAddressIsVisibleIsDisplayed() {
 
-    @When("user fills details")
-    public void user_fills_details() {
-
-    }
-
-    @When("user selects checkbox signup for our newsletter")
-    public void user_selects_checkbox_signup_for_our_newsletter() {
-    }
-
-    @When("user selects checkbox receive special offers")
-    public void user_selects_checkbox_receive_special_offers() {
-    }
-
-    @When("user clicks create account button")
-    public void user_clicks_create_account_button() {
+        Assert.assertTrue(mainPageFunctionalities.existingEmailVerification.isDisplayed());
 
     }
-
-    @Then("user verifies that account is created")
-    public void user_verifies_that_acount_is_created() {
-
-    }
-
-    @When("user clicks continue button")
-    public void user_clicks_continue_button() {
-
-    }
-
-    @When("user verifies that logged in")
-    public void user_verifies_that_logged_in() {
-
-    }
-
-    @When("user clicks delete account button")
-    public void user_clicks_delete_account_button() {
-
-    }
-
-    @Then("user verifies that account deleted")
-    public void user_verifies_that_account_deleted() {
-
-
-    }
-
-
 }

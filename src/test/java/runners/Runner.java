@@ -15,8 +15,9 @@ import org.junit.runner.RunWith;
 //        },
         features = "./src/test/resources/features",
         glue = "stepdefinitions",
-        tags = "@register_user",
-        dryRun =true
+        tags = "@view_category_products",
+        //tags ="@create_account_with_existing_email",
+        dryRun =false
 
 )
 
