@@ -28,5 +28,8 @@ public class ViewBrandProductsPage {
 
         @FindBy(xpath = "//a[@href='/brand_products/H&M']")
         public WebElement hmproducts;
+
+        @FindBy (xpath = "//*[text()='Brand - H&M Products']")
+        public WebElement hmProductsText;
     }
 

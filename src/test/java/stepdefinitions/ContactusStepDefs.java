@@ -46,6 +46,7 @@ public class ContactusStepDefs {
     }
     @And("verify success message")
     public void verifySuccessMessage() {
+
         Assert.assertTrue(contactUsForm.successMessage.isDisplayed());
     }
     @Then("user clicks Home button and verifies that landed to home page successfully")
